@@ -19,7 +19,8 @@
 }
 
 .singleProject {
-  width: 300px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .projectNotFound {
@@ -34,15 +35,23 @@
 
 @include smTabletView {
   .listProjects {
-    padding: 0px;
+    padding: 0px 20px;
   }
-  .projectsTitleText {
-    text-align: left;
+  .singleProject {
+    margin-right: 30px;
   }
 }
 
 @include lgLaptopView{
   .listProjects {
     justify-content: space-between;
+    padding: 0px;
+  }
+  .projectsTitleText {
+    text-align: left;
+  }
+  .singleProject {
+    margin-right: 0px;
+    width: 300px;
   }
 }
