@@ -127,7 +127,7 @@ function SingleProjectDetails({ project }: Props): ReactElement {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        <Elements stripe={getStripe()}>
+        <Elements stripe={getStripe(i18n.language)}>
           <DonationsPopup project={project} onClose={handleClose} />
         </Elements>
       </Modal>

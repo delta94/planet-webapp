@@ -50,7 +50,7 @@ export default function PopupProject({
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        <Elements stripe={getStripe()}>
+        <Elements stripe={getStripe(i18n.language)}>
           <DonationsPopup project={projectDetails} onClose={handleClose} />
         </Elements>
       </Modal>

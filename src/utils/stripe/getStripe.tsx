@@ -4,9 +4,10 @@
 import { Stripe, loadStripe } from '@stripe/stripe-js';
 
 let stripePromise: Promise<Stripe | null>;
-const getStripe = () => {
+const getStripe = (locale) => {
   if (!stripePromise) {
-    stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+    console.log('locale:' + locale);
+    stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!, { locale: locale });
   }
   return stripePromise;
 };

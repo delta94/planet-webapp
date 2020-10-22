@@ -66,7 +66,7 @@ export default function ProjectSnippet({
         aria-describedby="simple-modal-description"
         disableBackdropClick
       >
-        <Elements stripe={getStripe()}>
+        <Elements stripe={getStripe(i18n.language)}>
           <DonationsPopup
             project={projectDetails}
             directGift={directGift}
