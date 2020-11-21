@@ -94,6 +94,8 @@ module.exports = withSourceMaps({
     API_ENDPOINT: `${scheme}://${process.env.API_ENDPOINT}`,
     CDN_URL: `${scheme}://${process.env.CDN_URL}`,
     NEXTAUTH_URL: nextauthUrl,
+    AUTH0_CLIENT_SECRET:process.env.AUTH0_CLIENT_SECRET,
+    AUTH0_COOKIE_SECRET:process.env.AUTH0_COOKIE_SECRET
   },
   trailingSlash: false,
   reactStrictMode: true,

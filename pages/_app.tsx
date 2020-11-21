@@ -2,7 +2,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import React from 'react';
 import TagManager from 'react-gtm-module';
-import { Provider as AuthProvider } from 'next-auth/client'
 import '../src/features/projects/styles/MapPopup.scss';
 import '../src/theme/global.scss';
 import './../src/features/projects/styles/Projects.scss'
@@ -81,7 +80,6 @@ export default function PlanetWeb({ Component, pageProps, err }: any) {
   };
 
   return (
-    <AuthProvider session={pageProps.session}>
     <ThemeProvider>
       <CssBaseline />
       <Layout>
@@ -101,6 +99,5 @@ export default function PlanetWeb({ Component, pageProps, err }: any) {
         <Component {...ProjectProps} />
       </Layout>
     </ThemeProvider>
-    </AuthProvider>
   );
 }
