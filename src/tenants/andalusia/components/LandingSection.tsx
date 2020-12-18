@@ -1,25 +1,25 @@
 import AnimatedButton from '../../../features/common/InputTypes/AnimatedButton'
 import styles from './../styles/anilloverdegranada.module.scss'
 
-export default function LandingSection() {
+export default function LandingSection(props:any) {
     return (
         <div className={styles.landingSection}>
             <div className={styles.landingTextSection}>
                 <h2>
-                    200.000 árboles para Granada, <br />
-                    <span>1 Billón para el planeta.</span>
+                    {props.LandingSectionData.mainTitleText} <br />
+                    <span>{props.LandingSectionData.mainTitleSubText}</span>
                 </h2>
                 <p>
-                    <b>Plant-for-the-Planet</b>  propuso al Ayuntamiento de Granada en 2019 desarrollar el proyecto "Anillo verde de Granada" para crear un anillo natural reforestado que rodeará la ciudad.
+                    {props.LandingSectionData.para}
                 </p>
                 <div className={styles.landingButtonContainer}>
-                    <AnimatedButton className={styles.continueButton}>
+                    <AnimatedButton onClick={()=>props.handleOpen()} className={styles.continueButton}>
                         Plantar árboles
                     </AnimatedButton>
                 </div>
             </div>
             <div className={styles.landingImageSection}>
-                <img src="/tenants/andalusia/images/alhambra.jpg" />
+                <img src={props.LandingSectionData.imagePath} />
             </div>
 
         </div>
